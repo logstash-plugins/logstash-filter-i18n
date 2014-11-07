@@ -11,10 +11,10 @@ class LogStash::Filters::I18n < LogStash::Filters::Base
   milestone 0
 
   # Replaces non-ASCII characters with an ASCII approximation, or
-  # if none exists, a replacement character which defaults to “?”
+  # if none exists, a replacement character which defaults to `?`
   #
   # Example:
-  #
+  # [source,ruby]
   #     filter {
   #       i18n {
   #          transliterate => ["field1", "field2"]
