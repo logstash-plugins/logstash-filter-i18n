@@ -1,5 +1,5 @@
 # encoding: utf-8
-require "spec_helper"
+require "logstash/devutils/rspec/spec_helper"
 require "logstash/filters/i18n"
 
 describe LogStash::Filters::I18n do
