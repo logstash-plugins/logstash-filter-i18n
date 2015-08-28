@@ -4,7 +4,7 @@ require "logstash/filters/base"
 require "logstash/namespace"
 
 
-# The i18n filter allows you to remove special characters from
+# The i18n filter allows you to remove special characters
 # from a field
 class LogStash::Filters::I18n < LogStash::Filters::Base
   config_name "i18n"
