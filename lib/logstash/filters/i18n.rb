@@ -28,7 +28,6 @@ class LogStash::Filters::I18n < LogStash::Filters::Base
 
   public
   def filter(event)
-    
 
     transliterate(event) if @transliterate
 
@@ -38,13 +37,14 @@ class LogStash::Filters::I18n < LogStash::Filters::Base
   private
   def transliterate(event)
     @transliterate.each do |field|
-      if event[field].is_a?(Array)
-        event[field].map! { |v| I18n.transliterate(v).encode('UTF-8') }
-      elsif event[field].is_a?(String)
-        event[field] = I18n.transliterate(event[field].encode('UTF-8'))
+      value = event.get(field)
+      if value.is_a?(Array)
+        event.set(field, value.map { |v| I18n.transliterate(v).encode('UTF-8') })
+      elsif value.is_a?(String)
+        event.set(field, I18n.transliterate(value.encode('UTF-8')))
       else
         @logger.debug("Can't transliterate something that isn't a string",
-                      :field => field, :value => event[field])
+                      :field => field, :value => value)
       end
     end
   end # def transliterate
