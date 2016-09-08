@@ -1,8 +1,9 @@
 Gem::Specification.new do |s|
 
   s.name            = 'logstash-filter-i18n'
-  s.version         = '2.0.4'
-  s.licenses        = ['Apache License (2.0)']
+  s.version         = '3.0.0'
+  s.platform        = 'java'
+  s.licenses        = ['Apache-2.0']
   s.summary         = "The i18n filter allows you to remove special characters from a field"
   s.description     = "This gem is a Logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This gem is not a stand-alone program"
   s.authors         = ["Elastic"]
@@ -20,7 +21,7 @@ Gem::Specification.new do |s|
   s.metadata = { "logstash_plugin" => "true", "logstash_group" => "filter" }
 
   # Gem dependencies
-  s.add_runtime_dependency "logstash-core-plugin-api", "~> 1.0"
+  s.add_runtime_dependency "logstash-core-plugin-api", ">= 1.60", "<= 2.99"
   s.add_runtime_dependency 'i18n', ['>=0.6.6']
 
   s.add_development_dependency 'logstash-devutils'

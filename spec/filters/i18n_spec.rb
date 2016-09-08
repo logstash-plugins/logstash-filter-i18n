@@ -3,7 +3,6 @@ require "logstash/devutils/rspec/spec_helper"
 require "logstash/filters/i18n"
 
 describe LogStash::Filters::I18n do
-  
 
   describe "transliterate" do
     config <<-CONFIG
@@ -19,7 +18,7 @@ describe LogStash::Filters::I18n do
     }
 
     sample event do
-      insist { subject["transliterateme"] } == [ "AEroskobing" ]
+      insist { subject.get("transliterateme") } == [ "AEroskobing" ]
     end
   end
 end
