@@ -14,7 +14,7 @@ END - GENERATED VARIABLES, DO NOT EDIT!
 
 [id="plugins-{type}-{plugin}"]
 
-=== I18n
+=== I18n filter plugin
 
 include::{include_path}/plugin_header.asciidoc[]
 
