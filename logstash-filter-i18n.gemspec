@@ -25,5 +25,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'i18n', ['>=0.6.6']
 
   s.add_development_dependency 'logstash-devutils'
+  s.add_development_dependency 'insist'
 end
 
