@@ -1,6 +1,6 @@
 # Logstash Plugin
 
-[![Travis Build Status](https://travis-ci.org/logstash-plugins/logstash-filter-i18n.svg)](https://travis-ci.org/logstash-plugins/logstash-filter-i18n)
+[![Travis Build Status](https://travis-ci.com/logstash-plugins/logstash-filter-i18n.svg)](https://travis-ci.com/logstash-plugins/logstash-filter-i18n)
 
 This is a plugin for [Logstash](https://github.com/elastic/logstash).
 
