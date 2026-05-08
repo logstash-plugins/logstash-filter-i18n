@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name            = 'logstash-filter-i18n'
-  s.version         = '3.0.3'
+  s.version         = ::File.read('version').split("\n").first
   s.platform        = 'java'
   s.licenses        = ['Apache-2.0']
   s.summary         = "Removes special characters from a field"
